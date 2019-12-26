@@ -11,6 +11,7 @@ import { Footer } from './components/footer/list';
   templateUrl: 'app.html'
 })
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
