@@ -5,11 +5,13 @@ f-f2 button{
     height: 80px;
     width: 80px;
     border-radius: 40px;
-    background-color: blue;
+    line-height: 80px;
+    background-color: color($colors,danger);
     display: inline-block;
     cursor: pointer;
     position: relative;
     transition: top 0.5s;
+    font-family: 'Pacifico';
 }
 .roundbut:active{
     top:2px;
