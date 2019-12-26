@@ -40,7 +40,7 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
-
+//$font-family-base: "Pacifico", cursive !default;
 
 // App iOS Variables
 // --------------------------------------------------
@@ -86,3 +86,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+@import url(https://fonts.googleapis.com/css?family=Arima+Madurai|Lato|Pacifico);
