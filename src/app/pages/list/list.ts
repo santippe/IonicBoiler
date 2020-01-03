@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
+import { BasePage } from '../base/base';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-list',
   templateUrl: 'list.html'
 })
-export class ListPage {
+export class ListPage extends BasePage  {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    super(navCtrl);
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 

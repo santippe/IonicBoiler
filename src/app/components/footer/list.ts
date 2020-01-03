@@ -6,5 +6,5 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list.html'
 })
 export class Footer {
-  
+  public textOfTheButton : string;
 }

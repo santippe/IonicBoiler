@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { BasePage } from '../base/base';
 import { NavController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-base',
+  templateUrl: 'base.html'
 })
-export class HomePage extends BasePage {
+export class BasePage {
 
   constructor(public navCtrl: NavController) {
-    super(navCtrl);
+  
   }
-
 }
