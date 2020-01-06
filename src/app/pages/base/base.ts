@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -7,7 +7,8 @@ import { NavController } from 'ionic-angular';
 })
 export class BasePage {
 
+  @Input() title : string = "Home";
   constructor(public navCtrl: NavController) {
-  
+    
   }
 }

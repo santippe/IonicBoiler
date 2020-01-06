@@ -6,10 +6,6 @@ import { NavController } from 'ionic-angular';
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage extends BasePage {
-
-  constructor(public navCtrl: NavController) {
-    super(navCtrl);
-  }
-
+export class HomePage {
+  title : string = "Home";
 }
