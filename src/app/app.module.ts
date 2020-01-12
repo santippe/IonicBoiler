@@ -6,7 +6,8 @@ import { MyApp } from './app.component';
 import { BasePage } from './pages/base/base';
 import { HomePage } from './pages/home/home';
 import { ListPage } from './pages/list/list';
-import { Footer } from './components/footer/list';
+import { Footer } from './components/footer/footer';
+import { MockedServices } from './services/mocked/mock';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,10 +18,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     Footer,
-    BasePage
+    BasePage    
   ],
   imports: [
     BrowserModule,
+    MockedServices,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
