@@ -22,7 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    MockedServices,
+    //MockedServices,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

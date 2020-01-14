@@ -1,10 +1,14 @@
 import { Component, NgModule } from '@angular/core';
 import { Injectable } from '@angular/core';
 
-@NgModule()
 export class MockedServices {
+    
+    private _list : any[] = [];
+
     callMeBaby() {  
-             
-        return [];
+        return this._list;
+    }
+    getNewelements(){
+        
     }
 }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { BasePage } from '../base/base';
 import { MockedServices } from '../../services/mocked/mock';
-import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  providers : [MockedServices]
 })
 export class HomePage {
   title: string = "Home";
