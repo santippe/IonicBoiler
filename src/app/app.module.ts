@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { BasePage } from './pages/base/base';
 import { HomePage } from './pages/home/home';
 import { ListPage } from './pages/list/list';
 import { Footer } from './components/footer/footer';
-import { MockedServices } from './services/mocked/mock';
+//import { MockedServices } from './services/mocked/mock';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,10 +19,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     Footer,
-    BasePage    
+    BasePage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     //MockedServices,
     IonicModule.forRoot(MyApp),
   ],
@@ -34,7 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
