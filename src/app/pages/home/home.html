@@ -1,6 +1,7 @@
 <page-base [title]="'Home'">
   <ion-content padding>
-    <ion-searchbar (ionChange)="tellMeAStory()" cancelButtonIcon="md-add" showCancelButton></ion-searchbar>
+    <ion-searchbar (ionChange)="tellMeAStory()" cancelButtonIcon="md-add" showCancelButton [(ngModel)]=" test">
+    </ion-searchbar>
     <h3>Ionic Menu Starter</h3>
     <p>
       If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
@@ -9,8 +10,9 @@
     <button (click)="tellMeAStory()" block outline ion-button secondary>Populate this!</button>
     <br>
     <ion-list>
-      <ion-item *ngFor="let elem of plentyOfData">
-        <ion-label>{{elem.test}}</ion-label>
+      <ion-item *ngFor="let elem of plentyOfData" style='background-color: transparent;'>
+        <img src={{elem.image}} (click)="goto('test')">
+        <!-- <ion-label>{{elem.test}}</ion-label> -->
       </ion-item>
     </ion-list>
   </ion-content>

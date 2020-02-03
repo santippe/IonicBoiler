@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { BasePage } from '../base/base';
-import { DetailsPage } from '../detailspage/home';
 import { MockedServices } from '../../services/mocked/mock';
-import { NavigatorService } from '../../services/navservice/navigator';
 
 @Component({
-  selector: 'page-home',
+  selector: 'page-detail',
   templateUrl: 'home.html',
   providers: [MockedServices]
 })
-export class HomePage {
+export class DetailsPage {
   title: string = "Home";
   test: string = ""
   public plentyOfData: any[] = new Array();
@@ -27,11 +25,6 @@ export class HomePage {
       console.log(output)
       this.plentyOfData = output
     })
-  }
-
-  goto(whereGo) {
-    alert(whereGo)
-    NavigatorService.goTo(DetailsPage)
   }
 }
 

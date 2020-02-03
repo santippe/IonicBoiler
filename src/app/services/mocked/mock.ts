@@ -8,13 +8,19 @@ export class MockedServices {
     private _list: any[] = [];
 
     constructor(public http: HttpClient) {
-        http.get('')
+
     }
 
     callMeBaby() {
         return this._list;
     }
-    getNewelements() {
 
+    retrieveData(url) {
+        return this.http.get(url)
+            .toPromise()
+    }
+    getNewelements() {
+        //return this.retrieveData('https://images-api.nasa.gov/search?q=mars landing')
+        return this.retrieveData('assets/files/mock.json')
     }
 }

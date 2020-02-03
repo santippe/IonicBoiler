@@ -7,7 +7,9 @@ import { MyApp } from './app.component';
 import { BasePage } from './pages/base/base';
 import { HomePage } from './pages/home/home';
 import { ListPage } from './pages/list/list';
+import { DetailsPage } from './pages/detailspage/home';
 import { Footer } from './components/footer/footer';
+import { NavigatorService } from './services/navservice/navigator';
 //import { MockedServices } from './services/mocked/mock';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,21 +21,24 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     Footer,
-    BasePage
+    BasePage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    //MockedServices,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    DetailsPage
   ],
   providers: [
+    NavigatorService,
+    //[{ provide: NavigatorService, useClass: NavigatorService }],
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
