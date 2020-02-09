@@ -1,7 +1,7 @@
 import { Component, NgModule, Input } from '@angular/core';
 //import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Nav } from 'ionic-angular';
+import { Nav, NavParams } from 'ionic-angular';
 
 @NgModule()
 export class NavigatorService {
@@ -11,8 +11,8 @@ export class NavigatorService {
 
     constructor() { }
 
-    public static goTo(c: Component) {
-        this.localNav.setRoot(c)
-        //console.log('GO!')
+    public static goTo(c: Component, pars: NavParams) {
+        console.log('GO!')
+        this.localNav.setRoot(c, pars)
     }
 }

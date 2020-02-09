@@ -46,11 +46,11 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  openPage(page, pageInfo) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     //console.log(this.nav)
     //this.nav.setRoot(page.component);
-    NavigatorService.goTo(page.component);
+    NavigatorService.goTo(page.component, pageInfo);
   }
 }

@@ -11,7 +11,7 @@
     <br>
     <ion-list>
       <ion-item *ngFor="let elem of plentyOfData" style='background-color: transparent;'>
-        <img src={{elem.image}} (click)="goto('test')">
+        <img src={{elem.image}} (click)="goto(elem.image)">
         <!-- <ion-label>{{elem.test}}</ion-label> -->
       </ion-item>
     </ion-list>

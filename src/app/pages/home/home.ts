@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { BasePage } from '../base/base';
+import { detailPage } from '../../models/detailPage';
 import { DetailsPage } from '../detailspage/home';
 import { MockedServices } from '../../services/mocked/mock';
 import { NavigatorService } from '../../services/navservice/navigator';
@@ -20,7 +21,7 @@ export class HomePage {
   }
 
   tellMeAStory(): void {
-    this.mock.getNewelements().then(res => {
+    this.mock.getNewelements().then((res: any) => {
       console.log(res.collection.items.length)
       console.log(res.collection.items[0])
       let output = res.collection.items.slice(0, 20).map(x => new pippo(x.links[0].href))
@@ -31,7 +32,10 @@ export class HomePage {
 
   goto(whereGo) {
     alert(whereGo)
-    NavigatorService.goTo(DetailsPage)
+    let dp = new detailPage()
+    dp.itemTitle = "Detail Page"
+    dp.picSrc = whereGo
+    NavigatorService.goTo(DetailsPage, dp)
   }
 }
 
